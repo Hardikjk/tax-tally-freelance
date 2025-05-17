@@ -77,31 +77,6 @@ const TaxResults: React.FC<TaxResultsProps> = ({ results }) => {
           ))}
         </div>
       </motion.div>
-
-      <motion.div
-        variants={item}
-        initial="hidden"
-        animate="show"
-        className="mt-8 pt-6 border-t border-gray-200"
-      >
-        <h3 className="text-lg font-semibold text-gray-700 mb-4">Recommended Tax Resources</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <a
-            href="#"
-            className="block p-4 bg-blue-100 hover:bg-blue-200 rounded-lg text-center transition-colors"
-          >
-            <h4 className="text-blue-900 font-medium">Need to file? Try TurboTax Self-Employed</h4>
-            <p className="text-blue-700 text-sm mt-2">Get expert tax guidance for freelancers</p>
-          </a>
-          <a
-            href="#"
-            className="block p-4 bg-green-100 hover:bg-green-200 rounded-lg text-center transition-colors"
-          >
-            <h4 className="text-green-900 font-medium">Track deductions with Keeper Tax</h4>
-            <p className="text-green-700 text-sm mt-2">Save money by finding more deductions</p>
-          </a>
-        </div>
-      </motion.div>
     </div>
   );
 };
