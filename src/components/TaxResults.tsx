@@ -5,6 +5,7 @@ import { TaxResults as TaxResultsType } from "@/types/TaxTypes";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { formatCurrency } from "@/utils/formatters";
+import { HeartHandshake } from "lucide-react";
 
 interface TaxResultsProps {
   results: TaxResultsType;
@@ -76,6 +77,23 @@ const TaxResults: React.FC<TaxResultsProps> = ({ results }) => {
             </div>
           ))}
         </div>
+      </motion.div>
+
+      <motion.div
+        variants={item}
+        initial="hidden"
+        animate="show"
+        className="mt-6 text-center"
+      >
+        <a 
+          href="https://ko-fi.com/hardikkawale" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="inline-flex items-center px-6 py-3 bg-[#29abe0] hover:bg-[#1a8fc1] text-white rounded-full transition-colors shadow-sm"
+        >
+          <HeartHandshake className="mr-2 h-5 w-5" />
+          <span>Love this free tool? Support me on Ko-fi — donate any amount you want!</span>
+        </a>
       </motion.div>
     </div>
   );
